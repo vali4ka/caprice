@@ -1,0 +1,84 @@
+body {background: #FEFFF1}
+* {font-family: Helvetica, Arial, sans-serif;}
+h1 a{float: left; color: blue; margin-right: 300px; margin-left: 100px; text-decoration: none; font-style: italic; font-size: 45px;}
+
+
+
+nav {margin-left:30px; margin-top: 30px; text-decoration: none; text-align: justify; width: 150px; float: left; font-size: 30px; padding: 5px;}
+nav a {color: blue; text-decoration: none; font-weight: bold; font-size: 18px;}
+a {text-decoration: none;}
+a.color:link {color:black;}     
+ a.color:visited {color:blue;}  
+ a.color:hover {color:purple;}    
+
+
+h2 {text-align: center; font-size: 35px; font-style: italic; font-weight: lighter; color: red;}
+h3 {clear: left; margin-left: 70px; font-size: 25px;}
+h4.date{float:left;}
+
+
+section {margin-left: 3px; margin-top: 10px;}
+
+fieldset.border { border-left: 1px solid black;}
+fieldset {text-align: left; border: 1px solid black; padding: 30px; margin-top: 10px; margin-right: 20px; }
+fieldset.blog {margin-left: 70px;}
+fieldset.ramki{ border: 1px solid black; padding: 0px; margin-left: 45px; width: 120px; float:left;}
+fieldset.comments{width: 800px; clear: left; }
+fieldset.catalog{ border: 1px solid black; float: left; padding: 0px; margin-right: 5px; width: 120px;}
+
+
+#logo {width: 200px; height: 100px; text-align: right;}
+#pic {width: 110px; border:1px solid black; margin: 4px;}
+#pict {width: 180px;}
+#number {width: 30px}
+#contact {width: 250px; height: 150px;}
+#carta {width: 300px; height: 200px; margin-left: 100px;}
+#newlist {border-right: 1px solid black;}
+#product { width: 200px; height: 200px; border: 1px solid black;}
+#search {width: 200px;}
+#img{width: 120px; border: 1px solid black; margin: 10px; float:left; }
+
+
+
+.walking  {margin-left: 200px;}
+.letni {float: left; margin-left: 10px; width: 150px;}
+.ramka {width: 200px; float: left; margin-left: 50px; padding: 10px;}
+.vtorired {clear: left;}
+.cena {font-size: 12px; font-weight: bold; text-align: center; margin-left: 25px; width: 90px;}
+.novini {text-align: left; font-size: 26px; clear: left; margin-left: 50px;}
+.posledni {margin-left: 45px; clear:left}
+.sadarjanie {margin-left: 200px; margin-right:150px; border-left: 1px solid black;}
+.rvreme {float: left; margin-right: 100px; margin-left: 250px; }
+.office {text-align: left; margin-right: 100px; margin-left: 200px;}
+.newlist { margin-left: 400px; clear: left;}
+.buton {margin-left: 4px;}
+.product {float: left;}
+.buttproduct {margin-left: 0px; width: 80px; }
+.clear{clear: left; margin-left: 40px;}
+.cat {margin-left: 250px;}
+.prod {margin-left:20px; float: left; font-weight: bold;}
+.aboutus {margin-left: 30px; margin-top:30px; width: 940px}
+.date{font-size: 15px; text-align: right; padding-right:10px;}
+.buy{text-align: center; font-size: 25px; }
+.message{width: 240px;}
+.blue{color:blue;}
+.search{width: 710px; margin-left: 63px;}
+
+
+
+form {margin-left: 100px; float: left;}
+form.news {margin-left: 10px;}
+
+label.name {margin-right: 40px;}
+label.mail {margin-right: 25px;}
+label.phone {margin-right: 5px;}
+
+
+button {margin-left: 180px; margin-top:20px;}
+button.catal {margin-left: 10px; margin-right: 200px;}
+
+
+
+
+
+
