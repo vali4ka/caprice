@@ -32,19 +32,35 @@ $result = $res -> get($_GET['id']);
 					
 					<?php 
 						if($_SERVER['REQUEST_METHOD'] == 'POST'){
+							$name = $_POST['name'];
+							$email = $_POST['email'];
+							$phone = $_POST['phone'];
+												
+							if(validate_field($name) && $name != ''){
+								if(validate_email($email) && $email != ''){
+									if(validate_phone($phone) && $phone != ''){
 
-							$buy = new Buy();
-							$buy -> name = $_POST['name'];
-							$buy -> date_add = date('Y-m-d H:i:s');
-							$buy -> email = $_POST['email'];
-							$buy -> phone = $_POST['phone'];
-							$buy -> product_title = $value['name'];
-							$buy -> product_price = $value['price'];
-							$buy -> is_approved = '';
-							$buys -> add($buy);
-							
-						redirect('buy.php?id='.$_GET['id']);	
-}
+										$buy = new Buy();
+										$buy -> name = $_POST['name'];
+										$buy -> date_add = date('Y-m-d H:i:s');
+										$buy -> email = $_POST['email'];
+										$buy -> phone = $_POST['phone'];
+										$buy -> product_title = $value['name'];
+										$buy -> product_price = $value['price'];
+										$buy -> is_approved = '';
+										$buys -> add($buy);
+										
+										redirect('buy.php?id='.$_GET['id']);
+									}else{
+										echo  "<div class='error'>Въведете телефон!</div>";
+									}
+								}else{
+									echo  "<div class='error'>Въведете email!</div>";
+								}
+							}else{
+								echo  "<div class='error'>Въведете име!</div>";
+							}
+						}
 					?>
 					<?php } ?>
 				</div>

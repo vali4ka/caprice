@@ -8,8 +8,11 @@ nav {margin-left:30px; margin-top: 30px; text-decoration: none; text-align: just
 nav a {color: blue; text-decoration: none; font-weight: bold; font-size: 18px;}
 a {text-decoration: none;}
 a.color:link {color:black;}     
- a.color:visited {color:blue;}  
- a.color:hover {color:purple;}    
+a.color:visited {color:blue;}  
+a.color:hover {color:purple;}    
+
+div.success{ padding: 10px; border: 1px solid green; background: lightgreen; color: #000;}
+div.error{ padding: 10px; border: 1px solid red; background: indianred; color: #000;}
 
 
 h2 {text-align: center; font-size: 35px; font-style: italic; font-weight: lighter; color: red;}

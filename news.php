@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$comments -> add($comment);
 		
 	}else{
-		echo '<div class= "error">Въведете име и  коментар</div>';
+		echo "<div class= 'error'>Въведете име и  коментар</div>";
 	}
 	
 	redirect('news.php?id='.$_GET['id']);

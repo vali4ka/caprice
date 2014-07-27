@@ -37,7 +37,7 @@ class Contact_us implements ICRUD {
 
 	public function get($name) {                          //for search
 	
-		$sql = 'SELECT products.name, products.price, colors.products_id as products, colors.colors, colors.images
+		$sql = 'SELECT products.name, products.price, colors.products_id, colors.colors, colors.images
 				FROM products
 				LEFT JOIN colors ON products.id = colors.products_id
 				WHERE products.name ="'. $name.'"

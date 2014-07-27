@@ -6,7 +6,7 @@ $res = new Products($db_connection);
 $buys = new Buys($db_connection);
 
 $result = $res -> get($_GET['id']);
-$data = $buys->get($_GET['id']);
+//$data = $buys->get($_GET['id']);
 
 
 
@@ -34,7 +34,7 @@ $data = $buys->get($_GET['id']);
 					
 					<p>
 						
-						с референтен номер 	<?php echo $data['id'];?>.
+						с референтен номер 	<?php echo $value['id'];?>
 					</p>
 										
 				</div>

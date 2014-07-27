@@ -12,13 +12,14 @@ $result = $res -> getAll();
 		<article>
 				<div class="sadarjanie">
 					<h2>ПРОМИЦИОНАЛНИ ПРЕДЛОЖЕНИЯ:</h2>
-					<div>
+					<div> 
+						
 						<?php foreach($result as $key => $value){ ?>
 				
 				
 							<fieldset class="ramka">
 								<figure class="letni">
-								
+									<?php if($flag = true){ ?>
 									<a href="product.php?id=<?php echo $value['id'];?>"><img id="pict" src="../admin/pict/<?php echo $value['images']?>"/></a>
 									<figcaption>
 										<p class="cena">
@@ -29,6 +30,7 @@ $result = $res -> getAll();
 									</figcaption>
 								</figure>
 							</fieldset>
+						<?php } ?>
 						<?php } ?>
 					</div>
 

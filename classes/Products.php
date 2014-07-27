@@ -20,6 +20,18 @@ class Products implements ICRUD{
 	
 	public function get($id){
 	
+
+		$sql = '
+			SELECT colors.products_id,  products.price, products.id,  colors.images, colors.colors, products.name
+			FROM products
+			INNER JOIN colors ON products.id = colors.products_id 
+			WHERE colors.id ='.$id;
+			
+	return  mysqli_query($this -> db, $sql);
+	
+	}
+/*
+	
 			$sql = '
 			SELECT colors.images, colors.id, products.price, colors.colors, products.name, colors.products_id
 			FROM products
@@ -27,9 +39,10 @@ class Products implements ICRUD{
 			WHERE colors.id ='.$id;
 			
 			
-	return  mysqli_query($this -> db, $sql);
+		return  mysqli_query($this -> db, $sql);
+		
 	}
-	
+*/
 	
 	public function getAll(){
 		
@@ -49,8 +62,8 @@ class Products implements ICRUD{
 			SELECT colors.images, products.price, colors.colors, products.name, colors.id
 			FROM products
 			INNER JOIN colors ON products.id = colors.products_id 
-			WHERE colors.id ='.$id.'
-			LIMIT 1';
+			WHERE colors.id ='.$id;
+			//LIMIT 1';
 			
 	return  mysqli_query($this -> db, $sql);
 	}

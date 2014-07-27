@@ -15,7 +15,7 @@ if (!$db_connection) {
 
 
 require_once('functions/common.php');
-
+require_once('functions/validate.php');
 
 require_once('classes/IItem.php');
 require_once('classes/ICRUD.php');

@@ -3,8 +3,10 @@ require_once('include/header.php');
 require_once('include/bootstrap.php');
 
 $res = new Products($db_connection);
+$limit = new Comments($db_connection);
 //$result = $res -> getAll();
-$result = $res -> get($_GET['id']);
+//$result = $res -> get($_GET['id']);
+$result = $limit -> getAll();
 $one_images = $res->one_images($_GET['id']);
 
 
@@ -53,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					<?php foreach($result as $key => $value){ ?>
 							
 							<fieldset class="catalog">	
-								<a href="product.php?id=<?php echo $value['products_id'];?>">
+								<a href="product.php?id=<?php echo $value['id'];?>">
 								<img id="pic" src="../admin/pict/<?php echo $value['images']?>"/></a>
 								<figcaption>
 									<p class="cena">

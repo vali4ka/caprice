@@ -2,16 +2,42 @@
 require_once('include/header.php');
 require_once('include/bootstrap.php');
 
+
 $contact = new Contact_us($db_connection);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+
+	$name = $_POST['name'];
+	$email = $_POST['e_mail'];
+	$phone = $_POST['phone'];
+	$message = $_POST['message'];
 	
-	$cont = new contact_uss();
-	$cont -> name = $_POST['name'];
-	$cont -> e_mail = $_POST['e_mail'];
-	$cont -> phone = $_POST['phone'];
-	$cont -> message = $_POST['message'];
-	$contact -> add($cont);
+
+		if(validate_field($name) && $name != ''){
+			if(validate_email($email) && $email != ''){
+				if(validate_phone($phone) && $phone != ''){
+					if(validate_field($message) && $message != ''){
+					
+						$cont = new contact_uss();
+						$cont -> name = $_POST['name'];
+						$cont -> e_mail = $_POST['e_mail'];
+						$cont -> phone = $_POST['phone'];
+						$cont -> message = $_POST['message'];
+						$contact -> add($cont);
+						echo  "<div class='success'>Успешно попълнихте формата!</div>";
+					}else{
+						echo  "<div class='error'>Въведете съобщение!</div>";
+					}
+				}else{
+						echo  "<div class='error'>Въведете телефон!</div>";
+					}
+			}else{
+					echo  "<div class='error'>Въведете email!</div>";
+				}
+		}else{
+				echo  "<div class='error'>Въведете име!</div>";
+			}
 }
 
 
@@ -40,7 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					<br>
 					
 					<label for="phone" class="phone">Телефон</label>
-					<input type="text" id="phone" name="phone" value="" >
+					<input type="text" id="phone" name="phone" value="" >(08**/***-***)
 					<br><br>
 					
 					<label for="message">Вашето съобщение</label>

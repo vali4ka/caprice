@@ -58,19 +58,19 @@ class Comments implements ICRUD_comments {
 	
 	
 	}
-/*	
+	
 	public function getAll() {
 
-		$sql = 'SELECT * FROM coments2';
-		$res = mysqli_query($this->db, $sql);
-		$result = array();
-		while ( $row = mysqli_fetch_assoc($res) ) {
-			$result[] = $row;
-		}
+		$sql = '
+			SELECT colors.images, colors.colors, products.name, products.price, colors.id, colors.products_id
+			FROM products
+			INNER JOIN colors ON products.id = colors.products_id
+			LIMIT 3
+			';
 
-		return $result;
+		return  mysqli_query($this -> db, $sql);
 
 	}
-*/
+
 }
 ?>

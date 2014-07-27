@@ -11,14 +11,14 @@ $result = $res -> getAll();
 $success = false;
 $errors = false;
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['search'] !== '') {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     $name=$_POST['search'];
 	$data = $search->get($name);
-	
 	$success = true;
-
+	
 } else {
-    $errors = true;
+    $errors = false;
 }
 
 ?>
@@ -50,10 +50,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['search'] !== '') {
 			<?php endif; ?>
 			
 
-				<?php if($errors == true): ?>
-					<div>There is no such product in our catalogue. Please, try with a different product name!</div>
-					
-				<?php endif; ?>
 			
 				<fieldset class="search">
 					<form action="" method="post" class="news">
