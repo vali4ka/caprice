@@ -50,6 +50,7 @@ class Products implements ICRUD{
 			SELECT colors.images, colors.colors, products.name, products.price, colors.id, colors.products_id
 			FROM products
 			INNER JOIN colors ON products.id = colors.products_id
+			WHERE promo = 1
 			';
 
 		return  mysqli_query($this -> db, $sql);

@@ -77,7 +77,7 @@ $result = $res -> get($_GET['id']);
 						</label><br>
 						
 						<label>Телефон:
-						<input type="text" name="phone" id="" value="">
+						<input type="text" name="phone" id="" value="">0xxx/xxx-xxx
 						</label><br>
 						
 						<button type="submit" class="catal">поръчай</button>
